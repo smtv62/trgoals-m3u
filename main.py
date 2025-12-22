@@ -5,9 +5,9 @@ import sys
 
 def main():
     site = find_active_site()
-    if not site:
-        print("Aktif site bulunamadı")
-        sys.exit(1)
+  if not site:
+    print("⚠️ Aktif TRGoals sitesi bulunamadı, çıkılıyor")
+    return
 
     channel_url = site.rstrip("/") + "/channel.html?id=yayinzirve"
     base_url = find_base_url(channel_url)
