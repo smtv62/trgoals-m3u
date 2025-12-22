@@ -1,11 +1,20 @@
-from src.channels import KANALLAR
+# src/playlist.py
+from src.channels import CHANNELS
+from src.channel_resolver import resolve_from_channel
 
-def generate_m3u(base_url, referer, user_agent="Mozilla/5.0"):
+def generate_m3u(site):
     lines = ["#EXTM3U"]
-    for k in KANALLAR:
-        name = f"ÜmitM0d {k['kanal_adi']}"
-        lines.append(f'#EXTINF:-1 tvg-id="{k["tvg_id"]}" tvg-name="{name}",{name}')
-        lines.append(f"#EXTVLCOPT:http-user-agent={user_agent}")
-        lines.append(f"#EXTVLCOPT:http-referrer={referer}")
-        lines.append(base_url + k["dosya"])
+
+    for ch in CHANNELS:
+        print(f"🔍 {ch['kanal_adi']} çözülüyor...")
+        stream = resolve_from_channel(site, ch["id"])
+
+        if not stream:
+            print("  ❌ bulunamadı")
+            continue
+
+        print("  ✅ OK")
+        lines.append(f'#EXTINF:-1,{ch["kanal_adi"]}')
+        lines.append(stream)
+
     return "\n".join(lines)
