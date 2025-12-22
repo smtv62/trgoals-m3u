@@ -1,28 +1,32 @@
-import os
 from channels import CHANNELS
-from channels_resolver import resolve_channel
+from resolver import resolve_stream
 
 SITE = "https://trgoals1494.xyz"
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_FILE = os.path.join(BASE_DIR, "playlist.m3u")
+OUTPUT = "playlist.m3u"
 
 lines = ["#EXTM3U"]
 
+print(f"[OK] Aktif site: {SITE}")
+
 for ch in CHANNELS:
-    url = resolve_channel(SITE, ch["id"])
-    if not url:
+    stream, referer = resolve_stream(SITE, ch["id"])
+
+    if not stream:
         print(f"[!] Çözülmedi: {ch['name']}")
         continue
 
-    lines.append(f"#EXTINF:-1,{ch['name']}")
-    lines.append(url)
+    print(f"[✓] Çözüldü: {ch['name']}")
+
+    lines.append(f'#EXTINF:-1,{ch["name"]}')
+    lines.append(f'#EXTVLCOPT:http-user-agent=Mozilla/5.0')
+    lines.append(f'#EXTVLCOPT:http-referrer={referer}')
+    lines.append(stream)
 
 if len(lines) == 1:
     print("Playlist boş, çıkılıyor.")
     exit(1)
 
-with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+with open(OUTPUT, "w", encoding="utf-8") as f:
     f.write("\n".join(lines))
 
-print(f"[OK] playlist.m3u oluşturuldu → {OUTPUT_FILE}")
+print(f"[OK] {OUTPUT} oluşturuldu")
