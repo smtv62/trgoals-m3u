@@ -1,0 +1,22 @@
+#EXTM3U
+#EXTINF:-1,Bein Sports 1 HD
+#EXTVLCOPT:http-referrer=https://trgoals1491.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayin1.m3u8
+#EXTINF:-1,Bein Sports 2 HD
+#EXTVLCOPT:http-referrer=https://trgoals1491.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinb2.m3u8
+#EXTINF:-1,Bein Sports 3 HD
+#EXTVLCOPT:http-referrer=https://trgoals1491.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinb3.m3u8
+#EXTINF:-1,Bein Sports 4 HD
+#EXTVLCOPT:http-referrer=https://trgoals1491.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinb4.m3u8
+#EXTINF:-1,Bein Sports 5 HD
+#EXTVLCOPT:http-referrer=https://trgoals1491.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinb5.m3u8
+#EXTINF:-1,S Sport HD
+#EXTVLCOPT:http-referrer=https://trgoals1491.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinss.m3u8
+#EXTINF:-1,TRT Spor HD
+#EXTVLCOPT:http-referrer=https://trgoals1491.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayintrtspor.m3u8
