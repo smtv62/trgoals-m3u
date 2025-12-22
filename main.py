@@ -1,29 +1,29 @@
 from channels import CHANNELS
-from channels_resolver import resolve_channel
+from finder import find_active_site, find_baseurl
 
-SITE = "https://trgoals1495.xyz"
-OUTPUT = "playlist.m3u"
+SITE = find_active_site()
+if not SITE:
+    print("Aktif site bulunamadı")
+    exit(1)
+
+baseurl = find_baseurl(SITE)
+if not baseurl:
+    print("Base URL bulunamadı")
+    exit(1)
 
 lines = ["#EXTM3U"]
 
-print(f"[OK] Aktif site: {SITE}")
-
 for ch in CHANNELS:
-    stream = resolve_channel(SITE, ch["id"])
+    stream = baseurl.rstrip("/") + "/" + ch["file"]
 
-    if not stream:
-        print(f"[!] Çözülmedi: {ch['name']}")
-        continue
+    lines.append(
+        f'#EXTINF:-1,{ch["name"]}\n'
+        f'#EXTVLCOPT:http-user-agent=Mozilla/5.0\n'
+        f'#EXTVLCOPT:http-referrer={SITE}/\n'
+        f'{stream}'
+    )
 
-    lines.append(f"#EXTINF:-1,{ch['name']}")
-    lines.append(stream)
-    print(f"[OK] Çözüldü: {ch['name']}")
-
-if len(lines) == 1:
-    print("Playlist boş, çıkılıyor.")
-    exit(1)
-
-with open(OUTPUT, "w", encoding="utf-8") as f:
+with open("playlist.m3u", "w", encoding="utf-8") as f:
     f.write("\n".join(lines))
 
-print(f"[OK] {OUTPUT} oluşturuldu")
+print("[OK] playlist.m3u oluşturuldu")
