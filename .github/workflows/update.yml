@@ -2,22 +2,31 @@ name: Update Playlist
 
 on:
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: "0 */2 * * *"
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install -r requirements.txt
-      - run: python main.py
-      - run: |
-          git config user.name "trgoals-bot"
-          git config user.email "bot@users.noreply.github.com"
-          git add umitm0d.m3u .last_domain || true
-          git diff --cached --quiet || git commit -m "Auto update playlist"
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Run bot
+        run: python main.py
+
+      - name: Commit playlist
+        run: |
+          git config user.name "bot"
+          git config user.email "bot@github.com"
+          git add playlist.m3u
+          git commit -m "Auto update playlist" || exit 0
           git push
