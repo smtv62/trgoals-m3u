@@ -2,9 +2,10 @@ import os
 from channels import CHANNELS
 from channels_resolver import resolve_channel
 
-SITE = "https://trgoals1495.xyz"
+SITE = "https://trgoals1494.xyz"
 
-print("Çalışma dizini:", os.getcwd())
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_FILE = os.path.join(BASE_DIR, "playlist.m3u")
 
 lines = ["#EXTM3U"]
 
@@ -21,10 +22,7 @@ if len(lines) == 1:
     print("Playlist boş, çıkılıyor.")
     exit(1)
 
-output_path = os.path.abspath("playlist.m3u")
-print("Dosya yazılıyor:", output_path)
-
-with open(output_path, "w", encoding="utf-8") as f:
+with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
     f.write("\n".join(lines))
 
-print("[OK] playlist.m3u oluşturuldu")
+print(f"[OK] playlist.m3u oluşturuldu → {OUTPUT_FILE}")
