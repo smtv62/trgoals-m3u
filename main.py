@@ -1,6 +1,5 @@
 from channels import CHANNELS
-from site_finder import find_active_site
-from channels_resolver import resolve_channel
+from resolver import resolve_channel
 
 OUTPUT_FILE = "playlist.m3u"
 USER_AGENT = "Mozilla/5.0"
