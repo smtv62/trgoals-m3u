@@ -1,31 +1,22 @@
-# main.py
 from src.finder import find_active_site
 from src.playlist import generate_m3u
 
-OUTPUT = "umitm0d.m3u"
-
 def main():
-    print("▶️ TRGoals M3U Generator başlatıldı")
-
     site = find_active_site()
     if not site:
-        with open(OUTPUT, "w", encoding="utf-8") as f:
-            f.write("#EXTM3U\n# ⚠️ Aktif site bulunamadı\n")
-        print("⚠️ Aktif site bulunamadı")
+        print("❌ Aktif site bulunamadı")
         return
 
-    print(f"✅ Aktif site bulundu: {site}")
+    playlist = generate_m3u(site)
 
-    # 🔥 ARTIK BASE_URL = SİTENİN KENDİSİ
-    base_url = site.rstrip("/") + "/"
+    if playlist.strip() == "#EXTM3U":
+        print("⚠️ Hiç kanal çözülemedi")
+        return
 
-    playlist = generate_m3u(base_url, site)
-
-    with open(OUTPUT, "w", encoding="utf-8") as f:
+    with open("umitm0d.m3u", "w", encoding="utf-8") as f:
         f.write(playlist)
 
-    print(f"🎉 Playlist oluşturuldu: {OUTPUT}")
-    print(f"🔗 Base URL: {base_url}")
+    print("🎉 Playlist hazır: umitm0d.m3u")
 
 if __name__ == "__main__":
     main()
