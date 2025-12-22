@@ -1,22 +1,17 @@
 from channels import CHANNELS
 from resolver import resolve_channel
+import sys
 
 OUTPUT_FILE = "playlist.m3u"
-USER_AGENT = "Mozilla/5.0"
+SITE = "https://trgoals1494.xyz"
 
 def main():
-    site = find_active_site()
-    if not site:
-        print("Aktif site bulunamadı.")
-        return
-
-    print(f"[OK] Aktif site bulundu: {site}")
-
     lines = ["#EXTM3U"]
-    success = 0
 
     for ch in CHANNELS:
-        stream = resolve_channel(site, ch["id"])
+        print(f"[+] Çözülüyor: {ch['name']}")
+        stream = resolve_channel(SITE, ch["id"])
+
         if not stream:
             print(f"[!] Çözülmedi: {ch['name']}")
             continue
@@ -24,16 +19,13 @@ def main():
         lines.append(
             f'#EXTINF:-1 tvg-id="{ch["tvg_id"]}",{ch["name"]}'
         )
-        lines.append(f'#EXTVLCOPT:http-user-agent={USER_AGENT}')
-        lines.append(f'#EXTVLCOPT:http-referrer={site}/channel.html?id={ch["id"]}')
+        lines.append("#EXTVLCOPT:http-user-agent=Mozilla/5.0")
+        lines.append(f"#EXTVLCOPT:http-referrer={SITE}")
         lines.append(stream)
 
-        success += 1
-        print(f"[OK] Çözüldü: {ch['name']}")
-
-    if success == 0:
+    if len(lines) == 1:
         print("Playlist boş, çıkılıyor.")
-        return
+        sys.exit(1)
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
