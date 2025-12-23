@@ -2,31 +2,29 @@ name: Update Playlist
 
 on:
   schedule:
-    - cron: "0 */2 * * *"
+    - cron: '0 */3 * * *'  # her 3 saatte bir çalıştır
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          python-version: "3.11"
+          python-version: '3.11'
 
-      - name: Install deps
-        run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: pip install requests
 
-      - name: Run bot
+      - name: Run playlist script
         run: python main.py
 
-      - name: Commit playlist
-        run: |
-          git config user.name "bot"
-          git config user.email "bot@github.com"
-          git add playlist.m3u
-          git commit -m "Auto update playlist" || exit 0
-          git push
+      - name: Upload playlist artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: playlist
+          path: playlist.m3u
