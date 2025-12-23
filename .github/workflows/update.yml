@@ -2,7 +2,7 @@ name: Update Playlist
 
 on:
   schedule:
-    - cron: '0 */3 * * *'  # her 3 saatte bir çalıştır
+    - cron: '0 */3 * * *'  # her 3 saatte bir
   workflow_dispatch:
 
 jobs:
