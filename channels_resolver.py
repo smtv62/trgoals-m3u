@@ -5,45 +5,22 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0",
 }
 
-def resolve_channel(site, channel_id):
-    """
-    channel_id: yayin1, yayinb2 vs.
-    """
-    channel_url = f"{site}/channel.html?id={channel_id}"
-
+def find_baseurl(site, channel_id):
+    url = f"{site}/channel.html?id={channel_id}"
     headers = HEADERS.copy()
     headers["Referer"] = site + "/"
 
     try:
-        r = requests.get(channel_url, headers=headers, timeout=10)
+        r = requests.get(url, headers=headers, timeout=10)
         r.raise_for_status()
     except:
         return None
 
     html = r.text
 
-    # iframe içinden player endpoint yakala
-    iframe = re.search(r'iframe[^>]+src=["\']([^"\']+)["\']', html)
-    if iframe:
-        player_url = iframe.group(1)
-        if player_url.startswith("/"):
-            player_url = site + player_url
-
-        headers["Referer"] = channel_url
-        try:
-            pr = requests.get(player_url, headers=headers, timeout=10)
-            pr.raise_for_status()
-        except:
-            return None
-
-        # player içinden m3u8 ara
-        m3u8 = re.search(r'https?://[^"\']+\.m3u8[^"\']*', pr.text)
-        if m3u8:
-            return m3u8.group(0)
-
-    # fallback: direkt html içinde m3u8
-    m3u8 = re.search(r'https?://[^"\']+\.m3u8[^"\']*', html)
-    if m3u8:
-        return m3u8.group(0)
+    # view-source analizinden çıkan net pattern
+    m = re.search(r'baseurl\s*[:=]\s*["\']([^"\']+)["\']', html)
+    if m:
+        return m.group(1)
 
     return None
