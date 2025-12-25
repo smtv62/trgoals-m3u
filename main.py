@@ -1,18 +1,15 @@
-import sys
-import requests
-from channels_resolver import resolve_channel
-from channels import CHANNELS
-
-START_DOMAIN = 1495
-END_DOMAIN = 1700
+@@ -3,43 +3,43 @@
+from resolver import find_baseurl
 
 def find_active_site():
-    for i in range(START_DOMAIN, END_DOMAIN + 1):
-        url = f"https://trgoals{i}.xyz"
+    for i in range(1490, 1510):
+    for i in range(1495, 1600):
+        site = f"https://trgoals{i}.xyz"
         try:
-            r = requests.get(url, timeout=5)
-            if r.status_code == 200:
-                return url
+            r = requests.get(site, timeout=5)
+            if r.status_code == 200 and "channel.html" in r.text:
+                print(f"[OK] Aktif site: {site}")
+                return site
         except:
             continue
     return None
@@ -20,31 +17,29 @@ def find_active_site():
 def main():
     site = find_active_site()
     if not site:
-        print("[HATA] Aktif site bulunamadı.")
-        sys.exit(1)
+        print("[HATA] Aktif site bulunamadı")
+        return
 
-    print(f"[OK] Aktif site: {site}")
+    baseurl = find_baseurl(site, "yayin1")
+    if not baseurl:
+        print("[HATA] BaseURL bulunamadı")
+        return
 
-    playlist_lines = ["#EXTM3U"]
-    found = False
+    lines = ["#EXTM3U"]
 
     for ch in CHANNELS:
-        stream = resolve_channel(site, ch["id"])
-        if stream:
-            found = True
-            playlist_lines.append(f'#EXTINF:-1,{ch["name"]}')
-            playlist_lines.append(stream)
-            print(f"[OK] Çözüldü: {ch['name']}")
-        else:
-            print(f"[!] Çözülmedi: {ch['name']}")
+        stream = baseurl.rstrip("/") + "/" + ch["file"]
 
-    if not found:
-        print("Playlist boş, çıkılıyor.")
-        sys.exit(1)
+        lines.append(f'#EXTINF:-1,{ch["name"]}')
+        lines.append(f'#EXTVLCOPT:http-referrer={site}/')
+        lines.append(stream)
+
+        print(f"[OK] Eklendi: {ch['name']}")
 
     with open("playlist.m3u", "w", encoding="utf-8") as f:
-        f.write("\n".join(playlist_lines))
-    print("Playlist oluşturuldu: playlist.m3u")
+        f.write("\n".join(lines))
+
+    print("[OK] playlist.m3u oluşturuldu")
 
 if __name__ == "__main__":
     main()
