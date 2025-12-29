@@ -2,17 +2,34 @@ import requests
 from channels import CHANNELS
 from resolver import find_baseurl
 
+HEADERS = {
+    "User-Agent": "Mozilla/5.0",
+    "Referer": "https://google.com/"
+}
+
+START_DOMAIN = 1495
+END_DOMAIN = 1700
+
+
 def find_active_site():
-    for i in range(1495, 1510):
+    """
+    GERÇEK aktif domaini bulur.
+    channel.html?id=yayin1 çalışmıyorsa domain ELENİR
+    """
+    for i in range(START_DOMAIN, END_DOMAIN + 1):
         site = f"https://trgoals{i}.xyz"
+        test_url = f"{site}/channel.html?id=yayin1"
+
         try:
-            r = requests.get(site, timeout=5)
-            if r.status_code == 200 and "channel.html" in r.text:
+            r = requests.get(test_url, headers=HEADERS, timeout=7)
+            if r.status_code == 200 and "iframe" in r.text:
                 print(f"[OK] Aktif site: {site}")
                 return site
         except:
             continue
+
     return None
+
 
 def main():
     site = find_active_site()
@@ -40,6 +57,7 @@ def main():
         f.write("\n".join(lines))
 
     print("[OK] playlist.m3u oluşturuldu")
+
 
 if __name__ == "__main__":
     main()
