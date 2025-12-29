@@ -2,44 +2,36 @@ import requests
 from channels import CHANNELS
 from resolver import find_baseurl
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0",
-    "Referer": "https://google.com/"
-}
-
-START_DOMAIN = 1489
-END_DOMAIN = 1700
-
+START = 1489       # burayı değiştirince artık SAĞLIKLI çalışır
+END   = 1700
 
 def find_active_site():
-    """
-    GERÇEK aktif domaini bulur.
-    channel.html?id=yayin1 çalışmıyorsa domain ELENİR
-    """
-    for i in range(START_DOMAIN, END_DOMAIN + 1):
+    for i in range(START, END + 1):
         site = f"https://trgoals{i}.xyz"
-        test_url = f"{site}/channel.html?id=yayin1"
-
         try:
-            r = requests.get(test_url, headers=HEADERS, timeout=7)
-            if r.status_code == 200 and "iframe" in r.text:
-                print(f"[OK] Aktif site: {site}")
-                return site
-        except:
+            r = requests.get(site, timeout=5)
+            if r.status_code != 200:
+                continue
+
+            # ASIL KRİTİK NOKTA
+            baseurl = find_baseurl(site, "yayin1")
+            if baseurl:
+                print(f"[OK] Gerçek aktif site bulundu: {site}")
+                return site, baseurl
+            else:
+                print(f"[!] Yayın yok, atlandı: {site}")
+
+        except Exception:
             continue
 
-    return None
+    return None, None
 
 
 def main():
-    site = find_active_site()
-    if not site:
-        print("[HATA] Aktif site bulunamadı")
-        return
+    site, baseurl = find_active_site()
 
-    baseurl = find_baseurl(site, "yayin1")
-    if not baseurl:
-        print("[HATA] BaseURL bulunamadı")
+    if not site or not baseurl:
+        print("[HATA] Aktif ve yayın veren site bulunamadı")
         return
 
     lines = ["#EXTM3U"]
