@@ -3,7 +3,7 @@ from channels import CHANNELS
 from resolver import find_baseurl
 
 def find_active_site():
-    for i in range(1490, 1510):
+    for i in range(1495, 1510):
         site = f"https://trgoals{i}.xyz"
         try:
             r = requests.get(site, timeout=5)
