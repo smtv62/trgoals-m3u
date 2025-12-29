@@ -39,7 +39,7 @@ def main():
         print("[HATA] Aktif site bulunamadı")
         return
 
-    baseurl = find_baseurl(site, "yayin1")
+    baseurl = find_baseurl(site, "id=yayin1")
     if not baseurl:
         print("[HATA] BaseURL bulunamadı")
         return
