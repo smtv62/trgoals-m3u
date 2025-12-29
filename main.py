@@ -1,62 +1,43 @@
 import requests
-import re
-import logging
 from channels import CHANNELS
 from resolver import find_baseurl
 
-# Logging ayarları
-logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
-
 HEADERS = {
-    "User-Agent": "Mozilla/5.0",
+    "User-Agent": "Mozilla/5.0"
 }
 
-
-def find_active_site(start=1495, end=1700):
+def find_active_site(start=1490, end=1510):
     """
-    Aktif siteyi bulmaya çalışır.
-    - Yönlendirme durumlarını loglar ve atlar.
-    - 2xx yanıtlarında içerikte kendi domain adını arar.
-    - BaseURL testi için find_baseurl kullanır.
+    Aktif siteyi güvenilir biçimde bulur.
+    - 200 OK yanıtında içerikte beklenen sinyal (örn. 'channel.html') aranır.
+    - Başarısız veya 200 olmayan yanıtlar için diğer adaylara geçer.
     """
     for i in range(start, end + 1):
         site = f"https://trgoals{i}.xyz"
         try:
-            r = requests.get(
-                site,
-                headers=HEADERS,
-                timeout=6,
-                allow_redirects=False
-            )
+            r = requests.get(site, headers=HEADERS, timeout=5, allow_redirects=False)
 
-            # Yönlendirme durumlarını logla ve ilerle
+            # Yönlendirme durumlarını dikkate almak ister misiniz? Şu anda reddetmiyoruz, sadece logla.
             if r.status_code in (301, 302, 307, 308):
-                logging.info(f"Yönlendirme ({r.status_code}) atlandı: {site} -> {r.headers.get('Location')}")
+                print(f"[INFO] Yönlendirme: {site} -> {r.headers.get('Location')}")
                 continue
 
-            # 2xx yanıtlarını değerlendir
-            if 200 <= r.status_code < 300:
-                if f"trgoals{i}.xyz" in r.text:
-                    test_base = find_baseurl(site, "yayin1")
-                    if test_base:
-                        logging.info(f"[OK] Aktif site bulundu: {site}")
-                        return site
-                    else:
-                        logging.info(f"[INFO] BaseURL bulunamadı -> {site} reddedildi")
+            if r.status_code == 200:
+                # İçerikte beklenen sinyal (ör. 'channel.html' var mı bak)
+                if "channel.html" in r.text or "channels" in r.text or "EXTM3U" in r.text:
+                    print(f"[OK] Aktif site bulundu: {site}")
+                    return site
                 else:
-                    logging.info(f"[INFO] İçerikte alan adı bulunamadı: {site}")
+                    print(f"[INFO] 200 ancak içerik güvenilir sinyal içermiyor: {site}")
             else:
-                logging.info(f"[INFO] Geçersiz yanıt: {site} - Status {r.status_code}")
+                print(f"[INFO] Geçersiz yanıt: {site} - Status {r.status_code}")
 
         except requests.exceptions.RequestException as e:
-            logging.warning(f"[HATA] İstek hatası {site}: {e}")
-            continue
-        except Exception as e:
-            logging.warning(f"[HATA] Beklenmedik hata {site}: {e}")
+            print(f"[WARN] İstek hatası {site}: {e}")
+            # diğer adaylara geçiş
             continue
 
     return None
-
 
 def main():
     site = find_active_site()
@@ -72,7 +53,6 @@ def main():
     lines = ["#EXTM3U"]
 
     for ch in CHANNELS:
-        # file yolunda hataya yol açmamak için normalize et
         file_path = str(ch.get("file", "")).lstrip("/")
         base = baseurl.rstrip("/")
         stream = f"{base}/{file_path}" if file_path else base
@@ -89,7 +69,6 @@ def main():
         print("[OK] playlist.m3u oluşturuldu")
     except OSError as e:
         print(f"[HATA] playlist yazılamadı: {e}")
-
 
 if __name__ == "__main__":
     main()
