@@ -7,7 +7,7 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0",
 }
 
-def find_active_site(start=1490, end=1700):
+def find_active_site(start=1495, end=1700):
     for i in range(start, end + 1):
         site = f"https://trgoals{i}.xyz"
         try:
