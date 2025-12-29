@@ -2,36 +2,46 @@ import requests
 from channels import CHANNELS
 from resolver import find_baseurl
 
-START = 1489       # burayı değiştirince artık SAĞLIKLI çalışır
-END   = 1700
+HEADERS = {
+    "User-Agent": "Mozilla/5.0",
+}
 
-def find_active_site():
-    for i in range(START, END + 1):
+def find_active_site(start=1495, end=1700):
+    for i in range(start, end + 1):
         site = f"https://trgoals{i}.xyz"
         try:
-            r = requests.get(site, timeout=5)
-            if r.status_code != 200:
+            r = requests.get(
+                site,
+                headers=HEADERS,
+                timeout=6,
+                allow_redirects=False   # 🔴 EN ÖNEMLİ SATIR
+            )
+
+            # Redirect varsa → bu domaini geç
+            if r.status_code in (301, 302, 303, 307, 308):
+                print(f"[SKIP] Redirect var: {site}")
                 continue
 
-            # ASIL KRİTİK NOKTA
-            baseurl = find_baseurl(site, "yayin1")
-            if baseurl:
-                print(f"[OK] Gerçek aktif site bulundu: {site}")
-                return site, baseurl
-            else:
-                print(f"[!] Yayın yok, atlandı: {site}")
+            # Gerçek içerik mi?
+            if r.status_code == 200 and "channel.html" in r.text:
+                print(f"[OK] Aktif site bulundu: {site}")
+                return site
 
-        except Exception:
+        except Exception as e:
             continue
 
-    return None, None
+    return None
 
 
 def main():
-    site, baseurl = find_active_site()
+    site = find_active_site(start=1495, end=1700)
+    if not site:
+        print("[HATA] Aktif site bulunamadı")
+        return
 
-    if not site or not baseurl:
-        print("[HATA] Aktif ve yayın veren site bulunamadı")
+    baseurl = find_baseurl(site, "yayin1")
+    if not baseurl:
+        print("[HATA] BaseURL bulunamadı")
         return
 
     lines = ["#EXTM3U"]
