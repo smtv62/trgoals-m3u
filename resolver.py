@@ -8,7 +8,7 @@ HEADERS = {
 
 def find_active_site(start=3, end=50):
     for i in range(start, end + 1):
-        site = f"https://tvdahibet{i}.com"
+        site = f"https://trgoals{i}.com"
         try:
             r = requests.get(site, timeout=5)
             if r.status_code == 200:
