@@ -21,20 +21,27 @@ def get_channel_data(active_url):
         resp = requests.get(active_url, timeout=10)
         soup = BeautifulSoup(resp.text, 'html.parser')
         
-        # Linkleri ve isimleri tara
-        for link in soup.find_all('a', href=True):
-            href = link['href']
-            if 'id=' in href:
-                name = link.get_text(strip=True)
-                yayin_id = href.split('id=')[-1]
-                if name and yayin_id:
-                    names_and_ids[yayin_id] = name
+        # SADECE verdiğin yapıdaki kanal isimlerini süzüyoruz
+        # a class="channel-item" içindeki div class="channel-name" metnini alıyoruz
+        for item in soup.find_all('a', class_='channel-item'):
+            href = item.get('href', '')
+            name_div = item.find('div', class_='channel-name')
+            
+            if 'id=' in href and name_div:
+                # İkon metnini (fas fa-tv) değil, sadece kanal ismini al
+                channel_name = name_div.get_text(strip=True)
+                # id değerini çek (yayin1, yayinb2 vb.)
+                channel_id = href.split('id=')[-1]
+                
+                if channel_name and channel_id:
+                    names_and_ids[channel_id] = channel_name
 
-        # Base URL bul
+        # Base URL bulma işlemi
         test_page = requests.get(f"{active_url}/channel.html?id=yayin1", timeout=5)
         match = re.search(r'const baseurl = "(https?://[^"]+)"', test_page.text)
         if match:
             base_url_found = match.group(1)
+            
     except:
         pass
     
@@ -49,19 +56,19 @@ def create_m3u():
     if not channel_map:
         return
 
-    lines = ["#EXTM3U"]
+    m3u_lines = ["#EXTM3U"]
     
     for yid, name in channel_map.items():
-        # Dosya adını belirle (yid zaten yayin1, yayinb2 vs. geliyor)
-        # Eğer yid içinde zaten .m3u8 yoksa ekle
-        filename = yid if ".m3u8" in yid else f"{yid}.m3u8"
+        # Dosya adı ve link yapısı
+        filename = f"{yid}.m3u8" if not yid.endswith(".m3u8") else yid
         
-        lines.append(f'#EXTINF:-1, {name}')
-        lines.append(f'#EXTVLCOPT:http-referrer={active_site}/')
-        lines.append(f'{base_url}{filename}')
+        m3u_lines.append(f'#EXTINF:-1, {name}')
+        # Referer eklemesi
+        m3u_lines.append(f'#EXTVLCOPT:http-referrer={active_site}/')
+        m3u_lines.append(f'{base_url}{filename}')
 
     with open("playlist.m3u", "w", encoding="utf-8") as f:
-        f.write("\n".join(lines))
+        f.write("\n".join(m3u_lines))
 
 if __name__ == "__main__":
     create_m3u()
