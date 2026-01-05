@@ -1,22 +1,91 @@
 #EXTM3U
-#EXTINF:-1,Bein Sports 1 HD
+#EXTINF:-1, Kanal 1
 #EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
 https://ogr.d72577a9dd0ec6.sbs/yayin1.m3u8
-#EXTINF:-1,Bein Sports 2 HD
+#EXTINF:-1, Kanal 2
 #EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
 https://ogr.d72577a9dd0ec6.sbs/yayinb2.m3u8
-#EXTINF:-1,Bein Sports 3 HD
+#EXTINF:-1, Kanal 3
 #EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
 https://ogr.d72577a9dd0ec6.sbs/yayinb3.m3u8
-#EXTINF:-1,Bein Sports 4 HD
+#EXTINF:-1, Kanal 4
 #EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
 https://ogr.d72577a9dd0ec6.sbs/yayinb4.m3u8
-#EXTINF:-1,Bein Sports 5 HD
+#EXTINF:-1, Kanal 5
 #EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
 https://ogr.d72577a9dd0ec6.sbs/yayinb5.m3u8
-#EXTINF:-1,S Sport HD
+#EXTINF:-1, Kanal 6
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinbm1.m3u8
+#EXTINF:-1, Kanal 7
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinbm2.m3u8
+#EXTINF:-1, Kanal 8
 #EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
 https://ogr.d72577a9dd0ec6.sbs/yayinss.m3u8
-#EXTINF:-1,TRT Spor HD
+#EXTINF:-1, Kanal 9
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinss2.m3u8
+#EXTINF:-1, Kanal 10
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinssp2.m3u8
+#EXTINF:-1, Kanal 11
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayint1.m3u8
+#EXTINF:-1, Kanal 12
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayint2.m3u8
+#EXTINF:-1, Kanal 13
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayint3.m3u8
+#EXTINF:-1, Kanal 14
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinsmarts.m3u8
+#EXTINF:-1, Kanal 15
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinsms2.m3u8
+#EXTINF:-1, Kanal 16
 #EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
 https://ogr.d72577a9dd0ec6.sbs/yayintrtspor.m3u8
+#EXTINF:-1, Kanal 17
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayintrtspor2.m3u8
+#EXTINF:-1, Kanal 18
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinas.m3u8
+#EXTINF:-1, Kanal 19
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinatv.m3u8
+#EXTINF:-1, Kanal 20
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayintv8.m3u8
+#EXTINF:-1, Kanal 21
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayintv85.m3u8
+#EXTINF:-1, Kanal 22
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinnbatv.m3u8
+#EXTINF:-1, Kanal 23
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinex1.m3u8
+#EXTINF:-1, Kanal 24
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinex2.m3u8
+#EXTINF:-1, Kanal 25
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinex3.m3u8
+#EXTINF:-1, Kanal 26
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinex4.m3u8
+#EXTINF:-1, Kanal 27
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinex5.m3u8
+#EXTINF:-1, Kanal 28
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinex6.m3u8
+#EXTINF:-1, Kanal 29
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinex7.m3u8
+#EXTINF:-1, Kanal 30
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+https://ogr.d72577a9dd0ec6.sbs/yayinex8.m3u8
