@@ -2,8 +2,8 @@ name: 6 Saatlik Kanal Güncelleme
 
 on:
   schedule:
-    - cron: "0 */6 * * *" # Her 6 saatte bir
-  workflow_dispatch: # Manuel çalıştırma butonu
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
 
 jobs:
   build:
@@ -17,8 +17,8 @@ jobs:
         with:
           python-version: '3.9'
 
-      - name: Gereksinimleri Yükle
-        run: pip install requests
+      - name: Bağımlılıkları Yükle
+        run: pip install requests beautifulsoup4
 
       - name: Botu Çalıştır
         run: python bot.py
@@ -28,5 +28,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add playlist.m3u
-          git commit -m "Playlist güncellendi: $(date)" || exit 0
+          git commit -m "Kanal listesi güncellendi: $(date)" || exit 0
           git push
