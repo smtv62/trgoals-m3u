@@ -4,16 +4,56 @@
 #EXTVLCOPT:http-origin=https://trgoals1495.xyz
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://ogr.d72577a9dd0ec6.sbs/yayinatv.m3u8
-#EXTINF:-1 group-title="TRGoals",Leicester - West Brom
+#EXTINF:-1 group-title="TRGoals",S Sport
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1495.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinss.m3u8
+#EXTINF:-1 group-title="TRGoals",Tivibu 1
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1495.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayint1.m3u8
+#EXTINF:-1 group-title="TRGoals",TRT Spor
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1495.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayintrtspor.m3u8
+#EXTINF:-1 group-title="TRGoals",Barcelona - M.Tel Aviv
 #EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
 #EXTVLCOPT:http-origin=https://trgoals1495.xyz
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://ogr.d72577a9dd0ec6.sbs/yayinex1.m3u8
-#EXTINF:-1 group-title="TRGoals",BeIN Sports 4
+#EXTINF:-1 group-title="TRGoals",TofaÅ - Cholet
 #EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
 #EXTVLCOPT:http-origin=https://trgoals1495.xyz
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://ogr.d72577a9dd0ec6.sbs/yayinb4.m3u8
+https://ogr.d72577a9dd0ec6.sbs/yayinex2.m3u8
+#EXTINF:-1 group-title="TRGoals",Mersin Spor - Le Mans
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1495.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinex6.m3u8
+#EXTINF:-1 group-title="TRGoals",Cedevita Olim. - BahÃ§eÅehir
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1495.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinex5.m3u8
+#EXTINF:-1 group-title="TRGoals",KÄ±zÄ±lyÄ±ldÄ±z - Valencia
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1495.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinex3.m3u8
+#EXTINF:-1 group-title="TRGoals",S Sport 2
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1495.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinss2.m3u8
+#EXTINF:-1 group-title="TRGoals",BeIN Sports 3
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1495.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinb3.m3u8
 #EXTINF:-1 group-title="TRGoals",BeIN Sports 1
 #EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
 #EXTVLCOPT:http-origin=https://trgoals1495.xyz
@@ -24,11 +64,11 @@ https://ogr.d72577a9dd0ec6.sbs/yayin1.m3u8
 #EXTVLCOPT:http-origin=https://trgoals1495.xyz
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://ogr.d72577a9dd0ec6.sbs/yayinb2.m3u8
-#EXTINF:-1 group-title="TRGoals",BeIN Sports 3
+#EXTINF:-1 group-title="TRGoals",BeIN Sports 4
 #EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
 #EXTVLCOPT:http-origin=https://trgoals1495.xyz
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://ogr.d72577a9dd0ec6.sbs/yayinb3.m3u8
+https://ogr.d72577a9dd0ec6.sbs/yayinb4.m3u8
 #EXTINF:-1 group-title="TRGoals",BeIN Sports 5
 #EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
 #EXTVLCOPT:http-origin=https://trgoals1495.xyz
@@ -44,21 +84,6 @@ https://ogr.d72577a9dd0ec6.sbs/yayinbm1.m3u8
 #EXTVLCOPT:http-origin=https://trgoals1495.xyz
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://ogr.d72577a9dd0ec6.sbs/yayinbm2.m3u8
-#EXTINF:-1 group-title="TRGoals",S Sport
-#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
-#EXTVLCOPT:http-origin=https://trgoals1495.xyz
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://ogr.d72577a9dd0ec6.sbs/yayinss.m3u8
-#EXTINF:-1 group-title="TRGoals",S Sport 2
-#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
-#EXTVLCOPT:http-origin=https://trgoals1495.xyz
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://ogr.d72577a9dd0ec6.sbs/yayinss2.m3u8
-#EXTINF:-1 group-title="TRGoals",Tivibu 1
-#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
-#EXTVLCOPT:http-origin=https://trgoals1495.xyz
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://ogr.d72577a9dd0ec6.sbs/yayint1.m3u8
 #EXTINF:-1 group-title="TRGoals",Tivibu 2
 #EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
 #EXTVLCOPT:http-origin=https://trgoals1495.xyz
@@ -84,11 +109,6 @@ https://ogr.d72577a9dd0ec6.sbs/yayinsmarts.m3u8
 #EXTVLCOPT:http-origin=https://trgoals1495.xyz
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://ogr.d72577a9dd0ec6.sbs/yayinsms2.m3u8
-#EXTINF:-1 group-title="TRGoals",TRT Spor
-#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
-#EXTVLCOPT:http-origin=https://trgoals1495.xyz
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://ogr.d72577a9dd0ec6.sbs/yayintrtspor.m3u8
 #EXTINF:-1 group-title="TRGoals",TRT Spor 2
 #EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
 #EXTVLCOPT:http-origin=https://trgoals1495.xyz
