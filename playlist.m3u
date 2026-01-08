@@ -19,6 +19,11 @@ https://ogr.d72577a9dd0ec6.sbs/yayint1.m3u8
 #EXTVLCOPT:http-origin=https://trgoals1495.xyz
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://ogr.d72577a9dd0ec6.sbs/yayinex2.m3u8
+#EXTINF:-1 group-title="TRGoals",BeIN Sports 4
+#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1495.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinb4.m3u8
 #EXTINF:-1 group-title="TRGoals",Atletico Madrid - Real Madrid
 #EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
 #EXTVLCOPT:http-origin=https://trgoals1495.xyz
@@ -49,11 +54,6 @@ https://ogr.d72577a9dd0ec6.sbs/yayin1.m3u8
 #EXTVLCOPT:http-origin=https://trgoals1495.xyz
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://ogr.d72577a9dd0ec6.sbs/yayinb2.m3u8
-#EXTINF:-1 group-title="TRGoals",BeIN Sports 4
-#EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
-#EXTVLCOPT:http-origin=https://trgoals1495.xyz
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://ogr.d72577a9dd0ec6.sbs/yayinb4.m3u8
 #EXTINF:-1 group-title="TRGoals",BeIN Sports 5
 #EXTVLCOPT:http-referrer=https://trgoals1495.xyz/
 #EXTVLCOPT:http-origin=https://trgoals1495.xyz
