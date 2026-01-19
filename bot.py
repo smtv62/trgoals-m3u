@@ -11,6 +11,8 @@ HEADERS = {
     "Referer": "https://www.google.com/"
 }
 
+NEONSPOR_URL = "https://raw.githubusercontent.com/primatzeka/kurbaga/main/NeonSpor/NeonSpor.m3u"
+
 def find_active_site():
     print("Sistem taranıyor, dolu domain aranıyor...")
     for i in range(1495, 1601):
@@ -18,7 +20,6 @@ def find_active_site():
         try:
             r = requests.get(url, headers=HEADERS, timeout=3, verify=False, allow_redirects=True)
             if r.status_code == 200:
-                # Sadece domainin açık olması yetmez, içinde kanal listesi var mı bakıyoruz
                 if "channel-item" in r.text:
                     final_url = r.url.rstrip('/')
                     print(f"[+] Aktif ve dolu domain: {final_url}")
@@ -29,7 +30,7 @@ def find_active_site():
 
 def get_channel_data(active_url):
     channel_map = {}
-    base_url_found = None # Yedek adresi sildik!
+    base_url_found = None
 
     try:
         # 1. Kanalları Çek
@@ -44,36 +45,45 @@ def get_channel_data(active_url):
             if cid and name_div:
                 channel_map[cid.group(1)] = name_div.get_text().strip()
 
-        # 2. Dinamik Kaynak Avı (Derin Tarama)
-        # Sitenin içindeki TÜM script dosyalarını bul
+        # 2. Derin Script Taraması
         scripts = soup.find_all("script", src=True)
         potential_sources = [f"{active_url}/channel.html?id=yayin1", active_url]
-        
-        # Önce HTML içindeki script dosyalarının adreslerini listeye ekle
         for s in scripts:
             script_url = s['src']
             if not script_url.startswith('http'):
                 script_url = f"{active_url}/{script_url.lstrip('/')}"
             potential_sources.append(script_url)
 
-        print(f"Kaynak aranıyor ({len(potential_sources)} farklı nokta taranacak)...")
-
         for source in potential_sources:
             try:
                 res = requests.get(source, headers=HEADERS, timeout=5, verify=False)
-                # Regex: .sbs/ ile biten tırnak içindeki her şeyi ara
                 matches = re.findall(r'https?://[a-zA-Z0-9.-]+\.sbs/', res.text)
                 if matches:
                     base_url_found = matches[0]
-                    print(f"[!] Yayın kaynağı başarıyla yakalandı: {base_url_found}")
                     break
             except:
                 continue
-
     except Exception as e:
         print(f"[-] Hata: {e}")
 
     return channel_map, base_url_found
+
+def fetch_neonspor():
+    """NeonSpor M3U listesini çeker ve group-title ekler"""
+    print("NeonSpor listesi çekiliyor...")
+    try:
+        r = requests.get(NEONSPOR_URL, timeout=10)
+        lines = []
+        for line in r.text.splitlines():
+            if line.startswith("#EXTINF"):
+                if 'group-title=' not in line:
+                    line = line.replace("#EXTINF:-1", '#EXTINF:-1 group-title="NeonSpor"')
+            if not line.startswith("#EXTM3U") and line.strip():
+                lines.append(line)
+        return lines
+    except:
+        print("[-] NeonSpor listesi alınamadı!")
+        return []
 
 def create_m3u():
     active_site = find_active_site()
@@ -84,28 +94,30 @@ def create_m3u():
     channels, base_url = get_channel_data(active_site)
     
     if not base_url:
-        print("[-] HATA: Yayın kaynağı (baseurl) otomatik olarak yakalanamadı!")
-        print("Sitenin kod yapısı değişmiş olabilir.")
-        return
-
-    if not channels:
-        print("[-] HATA: Kanal listesi çekilemedi!")
+        print("[-] HATA: Yayın kaynağı (baseurl) otomatik yakalanamadı!")
         return
 
     m3u = ["#EXTM3U"]
+
+    # ---------- TRGOALS EKLEME ----------
+    print(f"TRGoals kanalları ekleniyor ({len(channels)} adet)...")
     for cid, name in channels.items():
         m3u.append(f'#EXTINF:-1 group-title="TRGoals",{name}')
         m3u.append(f'#EXTVLCOPT:http-referrer={active_site}/')
         m3u.append(f'#EXTVLCOPT:http-user-agent={HEADERS["User-Agent"]}')
         m3u.append(f"{base_url}{cid}.m3u8")
 
+    # ---------- NEONSPOR EKLEME ----------
+    neon_lines = fetch_neonspor()
+    if neon_lines:
+        m3u.extend(neon_lines)
+        print(f"NeonSpor kanalları eklendi ✔")
+
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.write("\n".join(m3u))
 
-    print(f"\n--- BAŞARILI ---")
-    print(f"Domain: {active_site}")
-    print(f"Kaynak: {base_url}")
-    print(f"Kanal: {len(channels)}")
+    print(f"\n--- İŞLEM TAMAM ---")
+    print(f"Playlist hazır! Toplam TRGoals: {len(channels)}")
 
 if __name__ == "__main__":
     create_m3u()
