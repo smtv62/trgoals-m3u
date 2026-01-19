@@ -1,112 +1,295 @@
-import requests
-import re
-import urllib3
-from bs4 import BeautifulSoup
+#EXTM3U
+#EXTINF:-1 group-title="TRGoals",BeIN Sports 1
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayin1.m3u8
+#EXTINF:-1 group-title="TRGoals",BeIN Sports 2
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinb2.m3u8
+#EXTINF:-1 group-title="TRGoals",TRT Spor
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayintrtspor.m3u8
+#EXTINF:-1 group-title="TRGoals",Tivibu 1
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayint1.m3u8
+#EXTINF:-1 group-title="TRGoals",S Sport
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinss.m3u8
+#EXTINF:-1 group-title="TRGoals",BeIN Sports 3
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinb3.m3u8
+#EXTINF:-1 group-title="TRGoals",Elche - Sevilla
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinex1.m3u8
+#EXTINF:-1 group-title="TRGoals",BeIN Sports 4
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinb4.m3u8
+#EXTINF:-1 group-title="TRGoals",BeIN Sports 5
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinb5.m3u8
+#EXTINF:-1 group-title="TRGoals",BeIN Max 1
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinbm1.m3u8
+#EXTINF:-1 group-title="TRGoals",BeIN Max 2
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinbm2.m3u8
+#EXTINF:-1 group-title="TRGoals",S Sport 2
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinss2.m3u8
+#EXTINF:-1 group-title="TRGoals",Tivibu 2
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayint2.m3u8
+#EXTINF:-1 group-title="TRGoals",Tivibu 3
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayint3.m3u8
+#EXTINF:-1 group-title="TRGoals",Tivibu 4
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayint4.m3u8
+#EXTINF:-1 group-title="TRGoals",Smartspor
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinsmarts.m3u8
+#EXTINF:-1 group-title="TRGoals",Smartspor 2
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinsms2.m3u8
+#EXTINF:-1 group-title="TRGoals",TRT Spor 2
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayintrtspor2.m3u8
+#EXTINF:-1 group-title="TRGoals",TRT 1
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayintrt1.m3u8
+#EXTINF:-1 group-title="TRGoals",A Spor
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinas.m3u8
+#EXTINF:-1 group-title="TRGoals",ATV
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinatv.m3u8
+#EXTINF:-1 group-title="TRGoals",TV 8
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayintv8.m3u8
+#EXTINF:-1 group-title="TRGoals",TV 8,5
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayintv85.m3u8
+#EXTINF:-1 group-title="TRGoals",NBA TV
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayinnbatv.m3u8
+#EXTINF:-1 group-title="TRGoals",Euro Sport 1
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayineu1.m3u8
+#EXTINF:-1 group-title="TRGoals",Euro Sport 2
+#EXTVLCOPT:http-referrer=https://trgoals1498.xyz/
+#EXTVLCOPT:http-origin=https://trgoals1498.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://ogr.d72577a9dd0ec6.sbs/yayineu2.m3u8
+#EXTINF:-1 tvg-id="bein_sport" tvg-name="BeIN Sport 1" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://seeklogo.com/images/B/bein-sports-1-logo-4E5E4AE6B8-seeklogo.com.png" group-title="BeINSports",BeIN Sport 1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinzirve.m3u8
 
-# SSL uyarılarını kapat (Güvenli olmayan bağlantı hatasını engellemek için)
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+#EXTINF:-1 tvg-id="bein_sport" tvg-name="BeIN Sport 2" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://seeklogo.com/images/B/bein-sports-2-logo-56F85DDE25-seeklogo.com.png" group-title="BeINSports",BeIN Sport 2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinb2.m3u8
 
-# Daha gerçekçi bir tarayıcı kimliği
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
-    "Accept-Language": "tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7",
-    "Referer": "https://www.google.com/"
-}
+#EXTINF:-1 tvg-id="bein_sport" tvg-name="BeIN Sport 3" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://seeklogo.com/images/B/bein-sports-3-logo-42227D7D66-seeklogo.com.png" group-title="BeINSports",BeIN Sport 3
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinb3.m3u8
 
-NEONSPOR_URL = "https://raw.githubusercontent.com/primatzeka/kurbaga/main/NeonSpor/NeonSpor.m3u"
+#EXTINF:-1 tvg-id="bein_sport" tvg-name="BeIN Sport 4" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://i.hizliresim.com/cww8drm.png" group-title="BeINSports",BeIN Sport 4
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinb4.m3u8
 
-def find_active_site():
-    print("Aktif TRGoals sitesi aranıyor...")
-    # Aralığı 1490'dan başlatıp 1600'e kadar tarıyoruz
-    for i in range(1490, 1601):
-        url = f"https://trgoals{i}.xyz"
-        try:
-            # verify=False ekledik: SSL hatası olsa bile sayfayı açar
-            r = requests.get(url, headers=HEADERS, timeout=5, verify=False, allow_redirects=True)
-            if r.status_code == 200:
-                print(f"[+] Aktif site bulundu: {url}")
-                return url
-        except Exception:
-            continue
-    return None
+#EXTINF:-1 tvg-id="bein_sport" tvg-name="BeIN Sport 5" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://i.hizliresim.com/63gjk4y.png" group-title="BeINSports",BeIN Sport 5
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinb5.m3u8
 
-def clean_channel_name(text):
-    return re.sub(r"\s+", " ", text).strip()
+#EXTINF:-1 tvg-id="bein_sport" tvg-name="BeIN Sport MAX 1" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://assets.bein.com/mena/sites/3/2015/06/beIN_SPORTS_MAX1_DIGITAL_Mono.png" group-title="BeINSports",BeIN Sport MAX 1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinbm1.m3u8
 
-def get_channel_data(active_url):
-    channel_map = {}
-    base_url_found = "https://ogr.d72577a9dd0ec6.sbs/" # Varsayılan/Yedek URL
+#EXTINF:-1 tvg-id="bein_sport" tvg-name="BeIN Sport MAX 2" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://tvprofil.com/img/kanali-logo/beIN_Sports_MAX_2_TR_logo_v2.png?1734011568" group-title="BeINSports",BeIN Sport MAX 2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinbm2.m3u8
 
-    try:
-        r = requests.get(active_url, headers=HEADERS, timeout=10, verify=False)
-        soup = BeautifulSoup(r.text, "html.parser")
+#EXTINF:-1 tvg-name="Tabii Spor" tvg-language="Turkish" tvg-country="TR" tvg-id="TabiiSpor" tvg-logo="https://cms-tabii-public-image.tabii.com/int/w500/43023.jpeg" group-title="TabiiSpor",Tabii Spor
+https://beert7sqimrk0bfdupfgn6qew.medya.trt.com.tr/master.m3u8
 
-        # Kanal listesini çekme (Daha esnek hale getirildi)
-        # Sitede 'a' etiketleri içinde 'id=' olanları bulur
-        items = soup.find_all("a", href=re.compile(r"id="))
-        
-        for item in items:
-            href = item.get("href", "")
-            # Kanal adını 'channel-name' divinden veya doğrudan text'ten al
-            name_div = item.select_one("div.channel-name")
-            channel_name = clean_channel_name(name_div.get_text()) if name_div else clean_channel_name(item.get_text())
-            
-            id_match = re.search(r"id=([a-zA-Z0-9_]+)", href)
-            if id_match:
-                channel_id = id_match.group(1)
-                if channel_name:
-                    channel_map[channel_id] = channel_name
+#EXTINF:-1 tvg-name="Tabii Spor 1" tvg-language="Turkish" tvg-country="TR" tvg-id="TabiiSpor1" tvg-logo="https://cms-tabii-public-image.tabii.com/int/w500/43005.jpeg" group-title="TabiiSpor",Tabii Spor 1
+https://iaqzu4szhtzeqd0edpsayinle.medya.trt.com.tr/master.m3u8
 
-        # Yayın kaynağını (baseurl) çekme
-        # Sayfa içindeki scriptleri tara
-        test = requests.get(f"{active_url}/channel.html?id=yayin1", headers=HEADERS, timeout=5, verify=False)
-        m = re.search(r'const\s+baseurl\s*=\s*"([^"]+)"', test.text)
-        if m:
-            base_url_found = m.group(1)
-            print(f"[i] Yayın kaynağı güncellendi: {base_url_found}")
+#EXTINF:-1 tvg-name="Tabii Spor 2" tvg-language="Turkish" tvg-country="TR" tvg-id="TabiiSpor2" tvg-logo="https://cms-tabii-public-image.tabii.com/int/w500/43008.jpeg" group-title="TabiiSpor",Tabii Spor 2
+https://klublsslubcgyiz7zqt5bz8il.medya.trt.com.tr/master.m3u8
 
-    except Exception as e:
-        print(f"[-] Veri çekme hatası: {e}")
+#EXTINF:-1 tvg-name="Tabii Spor 3" tvg-language="Turkish" tvg-country="TR" tvg-id="TabiiSpor3" tvg-logo="https://cms-tabii-public-image.tabii.com/int/w500/43011.jpeg" group-title="TabiiSpor",Tabii Spor 3
+https://ujnf69op16x2fiiywxcnx41q8.medya.trt.com.tr/master.m3u8
 
-    return channel_map, base_url_found
+#EXTINF:-1 tvg-name="Tabii Spor 4" tvg-language="Turkish" tvg-country="TR" tvg-id="TabiiSpor4" tvg-logo="https://cms-tabii-public-image.tabii.com/int/w500/43014.jpeg" group-title="TabiiSpor",Tabii Spor 4
+https://bfxy3jgeydpbphtk8qfqwm3hr.medya.trt.com.tr/master.m3u8
 
-def fetch_neonspor():
-    try:
-        r = requests.get(NEONSPOR_URL, timeout=10)
-        lines = []
-        for line in r.text.splitlines():
-            if line.startswith("#EXTINF"):
-                if 'group-title=' not in line:
-                    line = line.replace("#EXTINF:-1", '#EXTINF:-1 group-title="NeonSpor"')
-            if not line.startswith("#EXTM3U"):
-                lines.append(line)
-        return lines
-    except:
-        print("[-] NeonSpor listesi alınamadı.")
-        return []
+#EXTINF:-1 tvg-name="Tabii Spor 5" tvg-language="Turkish" tvg-country="TR" tvg-id="TabiiSpor5" tvg-logo="https://cms-tabii-public-image.tabii.com/int/w500/43017.jpeg" group-title="TabiiSpor",Tabii Spor 5
+https://z3mmimwz148csv0vaxtphqspf.medya.trt.com.tr/master.m3u8
 
-def create_m3u():
-    active_site = find_active_site()
-    if not active_site:
-        print("[-] Aktif TRGoals sitesi bulunamadı. Lütfen internetinizi veya domain aralığını kontrol edin.")
-        return
+#EXTINF:-1 tvg-name="Tabii Spor 6" tvg-language="Turkish" tvg-country="TR" tvg-id="TabiiSpor6" tvg-logo="https://cms-tabii-public-image.tabii.com/int/w500/43020.jpeg" group-title="TabiiSpor",Tabii Spor 6
+https://vbtob9hyq58eiophct5qctxr2.medya.trt.com.tr/master.m3u8
 
-    channel_map, base_url = get_channel_data(active_site)
-    if not channel_map:
-        print("[-] TRGoals kanal listesi çekilemedi (Sayfa yapısı değişmiş olabilir).")
-        return
+#EXTINF:-1 tvg-name="Tabii Spor 7" tvg-language="Turkish" tvg-country="TR" tvg-id="TabiiSpor7" tvg-logo="https://cms-rotf-api.tabii.com/r/int/w500/51612_0-0-1919-1080.jpeg" group-title="TabiiSpor",Tabii Spor 7
+https://rxnE77JupTdEYKE3TytvGQWYh.medya.trt.com.tr/master.m3u8
 
-    m3u = ["#EXTM3U"]
+#EXTINF:-1 tvg-id="ssport" tvg-name="S Sport" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://feo.kablowebtv.com/resize/168A635D265A4328C2883FB4CD8FF/0/0/Vod/HLS/f0f167c1-f2b1-41d0-9713-75c315820713.png" group-title="SSports",S Sport 1
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinss.m3u8
 
-    # ---------- TRGOALS ----------
-    for cid, name in channel_map.items():
-        stream = f"{base_url}{cid}.m3u8"
-        m3u.append(f'#EXTINF:-1 group-title="TRGoals",{name}')
-        m3u.append(f'#EXTVLCOPT:http-referrer={active_site}/')
-        m3u.append(f'#EXTVLCOPT:http-origin={active_site}')
-        m3u.append(f'#EXTVLCOPT:http-user-agent={HEADERS["User-Agent"]}')
-        m3u.append(stream)
+#EXTINF:-1 tvg-id="ssport" tvg-name="S Sport 2" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://feo.kablowebtv.com/resize/168A635D265A4328C2883FB4CD8FF/0/0/Vod/HLS/80f415bc-60e4-4dd9-8dc6-6e51d88f6abb.png" group-title="SSports",S Sport 2
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinss2.m3u8
 
-    # ---------- NEONSPOR ----------
-    m3u.extend(fetch
+#EXTINF:-1 tvg-id="ssport" tvg-name="S Sport Plus" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://i.hizliresim.com/qioouyh.png" group-title="SSports",S Sport Plus
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinex1.m3u8
+
+#EXTINF:-1 tvg-id="exxenspor" tvg-name="Exxen Spor 1" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://i.hizliresim.com/ioxh9th.png" group-title="ExxenSpor",Exxen Spor 1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinex1.m3u8
+
+#EXTINF:-1 tvg-id="exxenspor" tvg-name="Exxen Spor 2" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://i.hizliresim.com/ioxh9th.png" group-title="ExxenSpor",Exxen Spor 2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinex2.m3u8
+
+#EXTINF:-1 tvg-id="exxenspor" tvg-name="Exxen Spor 3" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://i.hizliresim.com/ioxh9th.png" group-title="ExxenSpor",Exxen Spor 3
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinex3.m3u8
+
+#EXTINF:-1 tvg-id="exxenspor" tvg-name="Exxen Spor 4" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://i.hizliresim.com/ioxh9th.png" group-title="ExxenSpor",Exxen Spor 4
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinex4.m3u8
+
+#EXTINF:-1 tvg-id="exxenspor" tvg-name="Exxen Spor 5" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://i.hizliresim.com/ioxh9th.png" group-title="ExxenSpor",Exxen Spor 5
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinex5.m3u8
+
+#EXTINF:-1 tvg-id="exxenspor" tvg-name="Exxen Spor 6" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://i.hizliresim.com/ioxh9th.png" group-title="ExxenSpor",Exxen Spor 6
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinex6.m3u8
+
+#EXTINF:-1 tvg-id="exxenspor" tvg-name="Exxen Spor 7" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://i.hizliresim.com/ioxh9th.png" group-title="ExxenSpor",Exxen Spor 7
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinex7.m3u8
+
+#EXTINF:-1 tvg-id="exxenspor" tvg-name="Exxen Spor 8" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://i.hizliresim.com/ioxh9th.png" group-title="ExxenSpor",Exxen Spor 8
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinex8.m3u8
+
+#EXTINF:-1 tvg-id="spor_smart" tvg-name="Spor Smart 1" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://image.milimaj.com/i/milliyet/75/869x477/61013bfb86b24419fc684867.jpg" group-title="SporSmart",Spor Smart 1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinsmarts.m3u8
+
+#EXTINF:-1 tvg-id="spor_smart" tvg-name="Spor Smart 2" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://image.milimaj.com/i/milliyet/75/869x477/61013bfb86b24419fc684867.jpg" group-title="SporSmart",Spor Smart 2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinsms2.m3u8
+
+#EXTINF:-1 tvg-id="tivibu_spor" tvg-name="Tivibu Spor 1" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/3/36/Tivibu_spor_logosu.jpg" group-title="TivibuSpor",Tivibu Spor 1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayint1.m3u8
+
+#EXTINF:-1 tvg-id="tivibu_spor" tvg-name="Tivibu Spor 2" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/3/36/Tivibu_spor_logosu.jpg" group-title="TivibuSpor",Tivibu Spor 2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayint2.m3u8
+
+#EXTINF:-1 tvg-id="tivibu_spor" tvg-name="Tivibu Spor 3" tvg-language="Turkish" tvg-country="TR" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/3/36/Tivibu_spor_logosu.jpg" group-title="TivibuSpor",Tivibu Spor 3
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayint3.m3u8
+
+#EXTINF:-1 tvg-name="TRT 1" tvg-language="Turkish" tvg-country="TR" tvg-id="Trt1" tvg-logo="https://cms-rotf-api.tabii.com/r/int/w500/23846_1-0-465-262.jpeg" group-title="Diğerleri", TRT 1
+https://tv-trt1.medya.trt.com.tr/master.m3u8
+
+#EXTINF:-1 tvg-name="TRT SPOR" tvg-language="Turkish" tvg-country="TR" tvg-id="TrtSpor" tvg-logo="https://cms-rotf-api.tabii.com/r/int/w500/40480_0-0-465-261.jpeg" group-title="Diğerleri", TRT SPOR
+https://tv-trtspor1.medya.trt.com.tr/master.m3u8
+
+#EXTINF:-1 tvg-name="TRT Spor Yıldız" tvg-language="Turkish" tvg-country="TR" tvg-id="trtsporyildiz" tvg-logo="https://cms-tabii-public-image.tabii.com/int/w500/23855_1-0-465-262.jpeg" group-title="Diğerleri",TRT Spor Yıldız
+https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor
+
+#EXTINF:-1 tvg-name="TV 8" tvg-language="Turkish" tvg-country="TR" tvg-id="tv8" tvg-logo="https://www.campaigntr.com/wp-content/uploads/2014/09/tv8-logo.png" group-title="Diğerleri",TV 8
+https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3
+
+#EXTINF:-1 tvg-name="TV 8.5" tvg-language="Turkish" tvg-country="TR" tvg-id="tv8bucuk" tvg-logo="https://www.tvyayinakisi.com/wp-content/uploads/2021/01/tv8.5.jpg" group-title="Diğerleri", TV 8.5
+https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=bf58ab52-4865-4c81-b223-26b41009801e&ce=3
+
+#EXTINF:-1 tvg-name="Atv" tvg-language="Turkish" tvg-country="TR" tvg-id="atv" tvg-logo="https://i.hizliresim.com/sl35dyd.jpg" group-title="Diğerleri", Atv
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTVLCOPT:http-referrer=https://monotv529.com/
+https://75d.zirvedesin114.lat/yayinatv.m3u8
+
+#EXTINF:-1 tvg-name="A Spor" tvg-language="Turkish" tvg-country="TR" tvg-id="aspor" tvg-logo="https://bursasporxcom.teimg.com/crop/1280x720/bursasporx-com/uploads/2024/10/imaj-aspor.jpg" group-title="Diğerleri", A Spor
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
+
+#EXTINF:-1 tvg-name="HTSpor" tvg-language="Turkish" tvg-country="TR" tvg-id="htspor" tvg-logo="https://www.htspor.com/images/manifest/social-share-logo.png" group-title="Diğerleri", HTSpor
+https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web
+
+#EXTINF:-1 tvg-name="Show TV" tvg-language="Turkish" tvg-country="TR" tvg-id="showtv" tvg-logo="https://mo.ciner.com.tr/video/2023/06/15/ver1726038663/8E1C90B3C04F89681637C4909149450C_640x360.jpg" group-title="Diğerleri",Show TV
+https://ciner.daioncdn.net/showtv/showtv.m3u8?app=4bc856ef-4c68-4a94-bc87-37dfaaa66558&ce=3
