@@ -12,7 +12,7 @@ NEONSPOR_URL = "https://raw.githubusercontent.com/primatzeka/kurbaga/main/NeonSp
 
 
 def find_active_site():
-    for i in range(1495, 1601):
+    for i in range(1498, 1601):
         url = f"https://trgoals{i}.xyz"
         try:
             r = requests.get(url, headers=HEADERS, timeout=5)
