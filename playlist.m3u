@@ -215,6 +215,10 @@ https://andro.226503.xyz/checklist/androstreamliveexn7.m3u8
 #EXTVLCOPT:http-referrer=https://birazcikspor44.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
 https://andro.226503.xyz/checklist/androstreamliveexn8.m3u8
+#EXTINF:-1 group-title="TRGoals",Sevilla - Girona
+#EXTVLCOPT:http-referrer=https://trgoals1530.xyz/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://y3b.d72577a9dd0ec25.sbs/ex1.m3u8
 #EXTINF:-1 group-title="TRGoals",BeIN Sports 1
 #EXTVLCOPT:http-referrer=https://trgoals1530.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
@@ -259,10 +263,6 @@ https://y3b.d72577a9dd0ec25.sbs/t3.m3u8
 #EXTVLCOPT:http-referrer=https://trgoals1530.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://y3b.d72577a9dd0ec25.sbs/ss.m3u8
-#EXTINF:-1 group-title="TRGoals",Sevilla - Girona
-#EXTVLCOPT:http-referrer=https://trgoals1530.xyz/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://y3b.d72577a9dd0ec25.sbs/ex1.m3u8
 #EXTINF:-1 group-title="TRGoals",BeIN Sports 3
 #EXTVLCOPT:http-referrer=https://trgoals1530.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
