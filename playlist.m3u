@@ -243,10 +243,10 @@ https://8pi.d72577a9dd0ec30.sbs/t2.m3u8
 #EXTVLCOPT:http-referrer=https://taraftarium1009.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://8pi.d72577a9dd0ec30.sbs/t1.m3u8
-#EXTINF:-1 group-title="TRGoals",Denver - Minnesota
+#EXTINF:-1 group-title="TRGoals",Rangers - Celtic
 #EXTVLCOPT:http-referrer=https://taraftarium1009.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-https://8pi.d72577a9dd0ec30.sbs/ex1.m3u8
+https://8pi.d72577a9dd0ec30.sbs/ex7.m3u8
 #EXTINF:-1 group-title="TRGoals",Tivibu 4
 #EXTVLCOPT:http-referrer=https://taraftarium1009.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
@@ -275,6 +275,10 @@ https://8pi.d72577a9dd0ec30.sbs/b4.m3u8
 #EXTVLCOPT:http-referrer=https://taraftarium1009.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 https://8pi.d72577a9dd0ec30.sbs/b3.m3u8
+#EXTINF:-1 group-title="TRGoals",Denver - Minnesota
+#EXTVLCOPT:http-referrer=https://taraftarium1009.xyz/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://8pi.d72577a9dd0ec30.sbs/ex1.m3u8
 #EXTINF:-1 group-title="TRGoals",BeIN Max 2
 #EXTVLCOPT:http-referrer=https://taraftarium1009.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
